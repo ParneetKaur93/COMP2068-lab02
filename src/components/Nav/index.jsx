@@ -1,31 +1,42 @@
 import React from 'react';
 
+
 // You're likely missing some imports...
 import {
   BrowserRouter as Router,
+  Link,
+  Route,
   Switch
 } from 'react-router-dom';
+import About from '../About';
+import Home from '../Home';
 
 import Styles from './styles';
 
-// Don't forget to import your components
 
 const Nav = () => {
+
   return (
     <Router>
       <Styles.Nav>
         <ul>
           <li>
-            {/* Your link to home here */}
+           
+            <Link to="/">Home</Link>
           </li>
           <li>
-            {/* Your link to about here */}
+          <Link to="/about">About</Link>
           </li>
         </ul>
       </Styles.Nav>
 
       <Switch>
-        {/* Your Routes Here */}
+      <Route exact path ="/">
+                 <Home/>
+            </Route>
+            <Route exact path ="/about">
+               <About/>
+            </Route>
       </Switch>
     </Router>
   );

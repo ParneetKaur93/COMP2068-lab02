@@ -1,14 +1,27 @@
 import React from 'react';
-
+import Header from '../shared/Header'
 // You need to import your shared header...
 
 const Home = () => {
-  return (
+  
+
+    return (
     <>
-      {/* You need to use your shared header component... */}
-      {/* You need a link to your about page as a call to action */}
+    <Header title="Welcome Home"/>
+    
+   <ul>
+   <form action="/about" method="get" target="_blank">
+         <button type="submit">About me</button>
+      </form>
+     
+     </ul>
+     
+    
     </>
+   
   );
+  
 }
+
  
 export default Home;

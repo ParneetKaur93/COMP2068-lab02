@@ -1,10 +1,10 @@
 import React from 'react';
 import Styles from './styles';
 
-const Header = ({title}) => {
+const Header = (props) => {
   return (
     <Styles.Header>
-      <h1>{title}</h1>
+      <h1>{props.title}</h1>
     </Styles.Header>
   );
 }
